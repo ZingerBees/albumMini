@@ -1,0 +1,8 @@
+<page-container show="{{visible}}" round='true'>
+  <view class="pop-body">
+    <view class="container">
+      <slot></slot>
+    </view>
+    <view class="cancel" bindtap="cancel">取消</view>
+  </view>
+</page-container>

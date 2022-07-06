@@ -1,0 +1,1 @@
+"D:\微信web开发者工具\cli.bat" cloud functions deploy --e development-2ghkwxqk33638dd4 --n quickstartFunctions --r --project "E:\TEST\teaMini" --report_first --report

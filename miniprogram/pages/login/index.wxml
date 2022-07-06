@@ -1,0 +1,4 @@
+<view>
+  <image></image>
+  <button type="primary">登录</button>
+</view>

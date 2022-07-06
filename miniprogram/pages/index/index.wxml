@@ -1,0 +1,43 @@
+<!-- bindtabsItemChange="getTabsItemChange"  获取子组件传回来的数据的方法 -->
+
+<Tabs tabs="{{tabsList}}" bindtabsItemChange="getTabsItemChange">
+  <scroll-view scroll-y="true" class="scrollContent">
+    <!-- tab1 当tab1激活时显示出来，其他tab则隐藏-->
+    <view wx:if="{{tabsList[0].isActive}}">
+      <view wx:for="{{imgList}}" wx:key="id" class="imgOne"   bindtap="clickRow" data-imginfo="{{item}}">
+        <view class="thumb">
+          <image wx:if="{{item.isDir!='0'}}" src="../../images/fileDir.png" style="width: 128rpx;height: 128rpx;"></image>
+          <image wx:else src="{{item.filePath}}" style="width: 128rpx;height: 128rpx;"></image>
+        </view>
+        <view class="names">
+          <text class="filename">{{item.dirName}}</text>
+          <view class="filecreatetime">{{item.createTime}}</view>
+        </view>
+        <view class="more" data-imginfo="{{item}}" catchtap="moreOperate">...</view>
+      </view>
+    </view>
+    <!-- tab2 -->
+    <view wx:elif="{{tabsList[1].isActive}}" class="infoContent">
+      <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+      <view class="mb-5">昵称：{{userInfo.nickName}}</view>
+      <view class="mb-5">性别：{{userInfo.gender==1?"男性":userInfo.gender==2?"女性":"未知"}}</view>
+      <view class="mb-5">地址：{{userInfo.country}}{{userInfo.province}}{{userInfo.city}}</view>
+    </view>
+  </scroll-view>
+</Tabs>
+<view class="footer">
+  <view class="file upload" bindtap="upload">上传</view>
+  <view class="file">
+    <view class="share">分享文件</view>
+  </view>
+</view>
+<Modal wx:if="{{visible}}" visible="{{visible}}">
+  <view class="mb-5" bindtap="rename">重命名</view>
+  <view class="mb-5" bindtap="del">删除</view>
+</Modal>
+<Modal wx:if="{{uploadVisible}}" visible="{{uploadVisible}}">
+  <view class="mb-5" bindtap="uploadImage">本地照片</view>
+  <view class="mb-5 mkdir" bindtap="makedir">新建文件夹</view>
+</Modal>
+
+

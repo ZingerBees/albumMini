@@ -1,0 +1,11 @@
+.pop-body{
+  overflow: hidden;
+}
+.pop-body>.container{
+  padding: 30rpx 30rpx 10rpx;
+}
+.pop-body>.cancel{
+  text-align: center;
+  background-color: #F5F5F5;
+  padding: 20rpx 0;
+}

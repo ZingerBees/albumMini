@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh":false,
+  "usingComponents": {
+    "Tabs":"../../components/Tabs/tabs",
+    "Modal":"../../components/Modal/Modal"
+  }
+}

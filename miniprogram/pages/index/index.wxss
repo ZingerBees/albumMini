@@ -1,0 +1,60 @@
+.scrollContent{
+  height: calc(100% - 172rpx);
+}
+.imgOne{
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 20rpx 0;
+}
+.thumb>image{
+  vertical-align: middle;
+}
+.names{
+  font-size: 26rpx;
+  flex:2;
+  padding: 0 20rpx;
+}
+.names>.filename{
+  font-size: 36rpx;
+  line-height: 70rpx;
+}
+.names>.filecreatetime{
+  font-size: 30rpx;
+}
+.more{
+  font-size: 50rpx;
+  line-height: 100rpx;
+}
+.footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10rpx 0;
+  background-color: #FCFCFC;
+}
+.file{
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+.share{
+  width: 200rpx;
+  padding: 10rpx 0;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 34rpx;
+  background-color: #4BA4F8;
+}
+.mb-5{
+  margin-bottom: 20rpx;
+}
+.infoContent{
+  text-align: center;
+}
+.avatar{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin: 20rpx 0;
+}
